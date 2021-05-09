@@ -37,7 +37,7 @@ const MorseToText = (props: MorseToTextProps) => {
       ></input>
 
       <div className={styles.outputSection}>
-        <p className="output">{morseToText(morse).toLowerCase()}</p>
+        <p className={styles.output}>{morseToText(morse).toLowerCase()}</p>
 
         <button onClick={onCopy}>
           <svg

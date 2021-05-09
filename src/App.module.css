@@ -7,7 +7,7 @@
   box-shadow: 0 2px 20px 0 #000;
 }
 
-.App .switch {
+.switch {
   padding: 30px;
 }
 
@@ -33,11 +33,6 @@
 
 .App ::placeholder {
   color: var(--light-grey);
-}
-
-.App .output {
-  font-family: "Major Mono Display", monospace;
-  text-align: center;
 }
 
 .App nav ul {

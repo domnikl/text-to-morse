@@ -38,7 +38,7 @@ const TextToMorse = (props: TextToMorseProps) => {
       ></input>
 
       <div className={styles.outputSection}>
-        <p className="output">{textToMorse(text)}</p>
+        <p className={styles.output}>{textToMorse(text)}</p>
 
         <button onClick={onCopy}>
           <svg
