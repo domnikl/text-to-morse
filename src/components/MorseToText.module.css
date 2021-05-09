@@ -1,0 +1,15 @@
+.MorseToText input[type="text"] {
+  font-family: "Major Mono Display", monospace;
+}
+
+.outputSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.outputSection p {
+  display: block;
+  width: 100%;
+}
