@@ -51,6 +51,7 @@
 .App nav li {
   margin-left: 10px;
   background-color: teal;
+  border: 2px solid rgb(0, 115, 115);
   padding: 10px;
   transform: rotate(13deg);
   margin-top: -10px;
@@ -70,4 +71,22 @@
   padding: 10px;
   display: block;
   color: white;
+}
+
+.App button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.output-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.output-section p {
+  display: block;
+  width: 100%;
 }
