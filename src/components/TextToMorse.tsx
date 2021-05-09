@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { textToMorse } from "../MorseCode";
-import "./TextToMorse.css";
+import styles from "./TextToMorse.module.css";
 
 interface TextToMorseProps {
   text?: string;
@@ -26,7 +26,7 @@ const TextToMorse = (props: TextToMorseProps) => {
   };
 
   return (
-    <div className="TextToMorse">
+    <div className={styles.TextToMorse}>
       <h1>Text-to-Morse</h1>
 
       <input
@@ -37,7 +37,7 @@ const TextToMorse = (props: TextToMorseProps) => {
         autoFocus
       ></input>
 
-      <div className="output-section">
+      <div className={styles.outputSection}>
         <p className="output">{textToMorse(text)}</p>
 
         <button onClick={onCopy}>

@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.css";
 import {
   BrowserRouter as Router,
   Route,
@@ -15,7 +15,7 @@ function App() {
   const [lastMorse, setLastMorse] = useState("");
 
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Router>
         <nav>
           <ul>
@@ -28,7 +28,7 @@ function App() {
           </ul>
         </nav>
 
-        <div className="Switch">
+        <div className={styles.switch}>
           <Switch>
             <Route path="/text">
               <MorseToText
