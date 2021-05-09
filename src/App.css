@@ -1,0 +1,92 @@
+.App {
+  width: 50vw;
+  max-width: 500px;
+  margin: 50px auto;
+  border: 2px solid rgb(194, 194, 194);
+  background-color: white;
+  box-shadow: 0 2px 20px 0 #000;
+}
+
+.App .Switch {
+  padding: 30px;
+}
+
+.App h1 {
+  text-align: center;
+}
+
+.App input[type="text"] {
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid rgb(192, 192, 192);
+  box-shadow: inset 4px 4px 8px -8px rgba(0, 0, 0, 0.75);
+}
+
+.App input[type="text"]:focus {
+  outline: none;
+  border: 2px solid teal;
+  color: var(--light-grey);
+  box-shadow: inset 4px 4px 8px -8px rgba(0, 0, 0, 0.9);
+}
+
+.App ::placeholder {
+  color: var(--light-grey);
+}
+
+.App .output {
+  font-family: "Major Mono Display", monospace;
+  text-align: center;
+}
+
+.App nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin-right: 10px;
+}
+
+.App nav li {
+  margin-left: 10px;
+  background-color: teal;
+  border: 2px solid rgb(0, 115, 115);
+  padding: 10px;
+  transform: rotate(13deg);
+  margin-top: -10px;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.App nav li:hover {
+  background-color: white;
+  border: 1px solid var(--light-grey);
+}
+
+.App nav li:hover a {
+  color: teal;
+}
+
+.App nav a {
+  padding: 10px;
+  display: block;
+  color: white;
+}
+
+.App button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.output-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.output-section p {
+  display: block;
+  width: 100%;
+}
