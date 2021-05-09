@@ -20,7 +20,7 @@ const MorseToText = (props: MorseToTextProps) => {
   const onCopy = () => {
     if (morse === "") return;
 
-    navigator.clipboard.writeText(morseToText(morse));
+    navigator.clipboard.writeText(morseToText(morse).toLowerCase());
     alert("copied to clipboard");
   };
 
