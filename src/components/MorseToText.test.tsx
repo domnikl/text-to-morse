@@ -5,7 +5,7 @@ import MorseToText from "./MorseToText";
 test("translates morse to text", () => {
   const { container } = render(<MorseToText morse="... --- ..." />);
 
-  expect(container.querySelector(".output").textContent).toEqual("sos");
+  expect(container.querySelector("p")?.textContent).toEqual("sos");
 });
 
 test("calls onChange fn", () => {
@@ -16,7 +16,7 @@ test("calls onChange fn", () => {
     target: { value: "..." },
   });
 
-  expect(container.querySelector(".output").textContent).toEqual("s");
+  expect(container.querySelector("p")?.textContent).toEqual("s");
   expect(mockOnChange.mock.calls.length).toBe(1);
   expect(mockOnChange.mock.calls[0][0]).toBe("...");
 });
@@ -30,7 +30,7 @@ test("can copy result to clipboard", () => {
   navigator.clipboard = mockClipboard;
   const { container } = render(<MorseToText morse="... --- ..." />);
 
-  fireEvent.click(container.querySelector(".output-section button"));
+  fireEvent.click(container.querySelector("button"));
 
   expect(navigator.clipboard.writeText).toHaveBeenCalledWith("sos");
 });
