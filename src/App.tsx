@@ -6,13 +6,20 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import TextToMorse from "./components/TextToMorse";
 import MorseToText from "./components/MorseToText";
+import {
+  selectMorse,
+  changeMorse,
+  selectText,
+  changeText,
+} from "./features/morseSlice";
 
 function App() {
-  const [lastText, setLastText] = useState("");
-  const [lastMorse, setLastMorse] = useState("");
+  const morse = useSelector(selectMorse);
+  const text = useSelector(selectText);
+  const dispatch = useDispatch();
 
   return (
     <div className={styles.App}>
@@ -32,14 +39,14 @@ function App() {
           <Switch>
             <Route path="/text">
               <MorseToText
-                morse={lastMorse}
-                onChange={(morse) => setLastMorse(morse)}
+                morse={morse}
+                onChange={(morse) => dispatch(changeMorse(morse))}
               />
             </Route>
             <Route path="/morse">
               <TextToMorse
-                text={lastText}
-                onChange={(text) => setLastText(text)}
+                text={text}
+                onChange={(text) => dispatch(changeText(text))}
               />
             </Route>
             <Route exact path="/">
