@@ -26,7 +26,7 @@ const MorseToText = (props: MorseToTextProps) => {
 
   return (
     <div className={styles.MorseToText}>
-      <h1>Morse-to-text</h1>
+      <h1>Morse → text</h1>
 
       <input
         type="text"

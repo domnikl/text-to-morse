@@ -1,9 +1,9 @@
 .MorseToText input[type="text"] {
-  font-family: "Major Mono Display", monospace;
+  font-family: var(--font-monospaced);
 }
 
 .output {
-  font-family: "Major Mono Display", monospace;
+  font-family: var(--font-monospaced);
   text-align: center;
 }
 

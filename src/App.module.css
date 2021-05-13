@@ -1,9 +1,9 @@
 .App {
   width: 50vw;
   max-width: 500px;
-  margin: 50px auto;
-  border: 2px solid rgb(194, 194, 194);
-  background-color: white;
+  margin: 15vh auto;
+  border: 2px solid var(--grey2);
+  background-color: var(--color5);
   box-shadow: 0 2px 20px 0 #000;
 }
 
@@ -20,19 +20,19 @@
   box-sizing: border-box;
   width: 100%;
   border-radius: 5px;
-  border: 1px solid rgb(192, 192, 192);
+  border: 1px solid var(--grey3);
   box-shadow: inset 4px 4px 8px -8px rgba(0, 0, 0, 0.75);
 }
 
 .App input[type="text"]:focus {
   outline: none;
-  border: 2px solid teal;
-  color: var(--light-grey);
+  border: 2px solid var(--color3);
+  color: var(--color2);
   box-shadow: inset 4px 4px 8px -8px rgba(0, 0, 0, 0.9);
 }
 
 .App ::placeholder {
-  color: var(--light-grey);
+  color: var(--grey3);
 }
 
 .App nav ul {
@@ -45,8 +45,8 @@
 
 .App nav li {
   margin-left: 10px;
-  background-color: teal;
-  border: 2px solid rgb(0, 115, 115);
+  background-color: var(--color1);
+  border: 2px solid var(--color3);
   padding: 10px;
   transform: rotate(13deg);
   margin-top: -10px;
@@ -54,18 +54,18 @@
 }
 
 .App nav li:hover {
-  background-color: white;
-  border: 1px solid var(--light-grey);
+  background-color: var(--color5);
+  border: 2px solid var(--color4);
 }
 
 .App nav li:hover a {
-  color: teal;
+  color: var(--color3);
 }
 
 .App nav a {
   padding: 10px;
   display: block;
-  color: white;
+  color: var(--color5);
 }
 
 .App button {

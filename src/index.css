@@ -1,22 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Major+Mono+Display&display=swap");
 
 :root {
-  --light-grey: rgba(193, 193, 193, 0.99);
+  --color1: #d97386;
+  --color2: #1f3a40;
+  --color3: #a65851;
+  --color4: #f2b6b6;
+  --color5: #f2f2f2;
+
+  --grey1: hsl(191, 0%, 19%);
+  --grey2: hsl(5, 0%, 48%);
+  --grey3: hsl(5, 0%, 80%);
+
+  --font-monospaced: "Major Mono Display", monospace;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Cinzel", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(90deg, rgba(35, 35, 35, 0.9) 0%, teal 80%);
-}
+  background-image: url("https://images.unsplash.com/photo-1510442650500-93217e634e4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  color: var(--color2);
 }
 
 nav ul {
@@ -27,11 +36,11 @@ nav ul {
 
 a {
   text-decoration: none;
-  color: teal;
+  color: var(--color3);
 }
 
 svg {
   height: 32px;
   width: auto;
-  color: teal;
+  color: var(--color3);
 }
