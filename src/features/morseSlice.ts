@@ -13,7 +13,7 @@ const loadFromLocalStorage = (): SliceState => {
     morse: "",
     text: "",
   };
-  const item = window.localStorage.getItem(storageKey);
+  const item = localStorage.getItem(storageKey);
 
   try {
     return JSON.parse(item ?? "null") ?? fallback;
@@ -23,7 +23,7 @@ const loadFromLocalStorage = (): SliceState => {
 };
 
 const storeInLocalStorage = (state: SliceState) => {
-  window.localStorage.setItem(storageKey, JSON.stringify(state));
+  localStorage.setItem(storageKey, JSON.stringify(state));
 };
 
 export const Slice = createSlice({
@@ -41,6 +41,7 @@ export const Slice = createSlice({
   },
 });
 
+export const initialState = loadFromLocalStorage;
 export const selectMorse = (state: RootState) => state.morse.morse;
 export const selectText = (state: RootState) => state.morse.text;
 export const { changeMorse, changeText } = Slice.actions;

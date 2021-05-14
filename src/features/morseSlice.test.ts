@@ -1,6 +1,6 @@
 import configureStore from "redux-mock-store";
 import { Store } from "../app/store";
-import { changeMorse, changeText, selectMorse, Slice } from "./morseSlice";
+import { changeMorse, changeText, initialState, Slice } from "./morseSlice";
 
 const mockStore = configureStore([]);
 
@@ -37,7 +37,8 @@ test("changeMorse will set morse in state", () => {
   expect(state).toEqual({ morse: "foobar", text: "" });
 
   // also, update localStorage
-  expect(window.localStorage.getItem("text-to-morse")).toBe(
+  expect(localStorage.setItem).toHaveBeenLastCalledWith(
+    "text-to-morse",
     '{"morse":"foobar","text":""}'
   );
 });
@@ -53,7 +54,16 @@ test("changeText will set text in state", () => {
   expect(state).toEqual({ morse: "", text: "foobar" });
 
   // also, update localStorage
-  expect(window.localStorage.getItem("text-to-morse")).toBe(
+  expect(localStorage.setItem).toHaveBeenLastCalledWith(
+    "text-to-morse",
     '{"morse":"","text":"foobar"}'
   );
+});
+
+test("will load initial state from localStorage", () => {
+  const x = { morse: "morse", text: "text" };
+
+  localStorage.setItem("text-to-morse", JSON.stringify(x));
+
+  expect(initialState()).toEqual(x);
 });
