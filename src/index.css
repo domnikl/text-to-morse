@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Major+Mono+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Roboto&family=Major+Mono+Display&display=swap");
 
 :root {
   --color1: #d97386;
@@ -16,7 +16,7 @@
 
 body {
   margin: 0;
-  font-family: "Cinzel", serif;
+  font-family: "Roboto", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("https://images.unsplash.com/photo-1510442650500-93217e634e4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80");
@@ -26,6 +26,12 @@ body {
   background-size: cover;
 
   color: var(--color2);
+}
+
+h1,
+h2,
+a {
+  font-family: "Cinzel", serif;
 }
 
 nav ul {

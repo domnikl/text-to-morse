@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Link,
   Redirect,
 } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,6 +14,8 @@ import {
   selectText,
   changeText,
 } from "./features/morseSlice";
+import Impressum from "./components/Impressum";
+import Layout from "./components/Layout";
 
 function App() {
   const morse = useSelector(selectMorse);
@@ -24,36 +25,30 @@ function App() {
   return (
     <div className={styles.App}>
       <Router>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/morse">generate Morse</Link>
-            </li>
-            <li>
-              <Link to="/text">generate Text</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <div className={styles.switch}>
-          <Switch>
-            <Route path="/text">
-              <MorseToText
-                morse={morse}
-                onChange={(morse) => dispatch(changeMorse(morse))}
-              />
-            </Route>
-            <Route path="/morse">
-              <TextToMorse
-                text={text}
-                onChange={(text) => dispatch(changeText(text))}
-              />
-            </Route>
-            <Route exact path="/">
-              <Redirect to="/morse" />
-            </Route>
-          </Switch>
-        </div>
+        <Layout>
+          <div className={styles.switch}>
+            <Switch>
+              <Route path="/text">
+                <MorseToText
+                  morse={morse}
+                  onChange={(morse) => dispatch(changeMorse(morse))}
+                />
+              </Route>
+              <Route path="/morse">
+                <TextToMorse
+                  text={text}
+                  onChange={(text) => dispatch(changeText(text))}
+                />
+              </Route>
+              <Route path="/impressum">
+                <Impressum />
+              </Route>
+              <Route exact path="/">
+                <Redirect to="/morse" />
+              </Route>
+            </Switch>
+          </div>
+        </Layout>
       </Router>
     </div>
   );

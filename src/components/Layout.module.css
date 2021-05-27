@@ -1,0 +1,49 @@
+.Layout nav li {
+  margin-left: 10px;
+  background-color: var(--color1);
+  border: 2px solid var(--color3);
+  padding: 10px;
+  transform: rotate(13deg);
+  margin-top: -10px;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+nav.footerMenu li {
+  border: none;
+  background-color: initial;
+  box-shadow: initial;
+  transform: initial;
+}
+
+.Layout nav li:hover {
+  background-color: var(--color5);
+  border: 2px solid var(--color4);
+}
+
+nav.footerMenu li:hover {
+  border: none;
+  background-color: initial;
+}
+
+.Layout nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin-right: 10px;
+}
+
+.Layout nav li:hover a {
+  color: var(--color3);
+}
+
+.Layout nav a {
+  padding: 10px;
+  display: block;
+  color: var(--color5);
+}
+
+nav.footerMenu a {
+  font-size: 0.8em;
+  color: var(--color1);
+}
